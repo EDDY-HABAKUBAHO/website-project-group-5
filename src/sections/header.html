@@ -4,7 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Navbar</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script defer>
+  
+</head>
+<script>
     function toggleMenu() {
       const menu = document.querySelector('.menu-mobile');
       const hamburger = document.querySelector('.hamburger');
@@ -23,15 +25,14 @@
         hamburger.classList.remove('hidden');
       }
     }
-  </script>
-</head>
+</script>
 <body class="">
 
   <!-- Navbar wrapper -->
-  <div class="flex justify-between mx-5 mt-5 items-center">
+  <div class="flex justify-between mx-5 mt-5 items-center sticky top-0">
     
     <!-- Language -->
-    <div>
+    <div class="font-semibold text-xl">
       <p>DE</p>
       <p>EN</p>
     </div>
@@ -40,7 +41,7 @@
     <div class="font-bold text-2xl">Baumeister</div>
 
     <!-- Desktop menu -->
-    <ul class="hidden lg:block space-y-2">
+    <ul class="hidden font-semibold lg:block ">
       <li>About</li>
       <li>Service</li>
       <li>Reference</li>
@@ -48,19 +49,18 @@
     </ul>
 
     <!-- Hamburger icon (small screens only) -->
-    <div class="lg:hidden">
-      <img src="./hamburgerMenu.png" onclick="toggleMenu()" alt="hamburgerMenu" class="hamburger w-8 cursor-pointer">
-      <img src="./crossIcon.png" onclick= "toggleMenu()"alt="crossIcon" class="cross hidden w-8 cursor-pointer">
+  <div class="lg:hidden">
+      <img src="src/sections/hamburgerMenu.png" onclick="toggleMenu()" alt="hamburgerMenu" class="hamburger w-8 cursor-pointer">
+      <img src="src/sections/crossIcon.png" onclick= "toggleMenu()"alt="crossIcon" class="cross hidden w-8 cursor-pointer">
     </div>
   </div>
 
 
-  <ul class="menu-mobile hidden fixed text-center mx-auto w-full space-y-4 text-xl bg-white p-6 rounded  z-50 lg:hidden">
+  <ul class="menu-mobile hidden font-semibold fixed text-center mx-auto w-full space-y-4 text-xl p-6 rounded  z-50 lg:hidden">
     <li onclick="toggleMenu()">About</li>
     <li onclick="toggleMenu()">Service</li>
     <li onclick="toggleMenu()">Reference</li>
     <li onclick="toggleMenu()">Contact</li>
   </ul>
-
 </body>
 </html>
