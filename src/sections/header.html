@@ -1,46 +1,11 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navbar</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  
-</head>
-<script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu-mobile');
-      const hamburger = document.querySelector('.hamburger');
-      const cross= document.querySelector('.cross');
-
-
-      const isHidden = menu.classList.contains('hidden');
-
-      if (isHidden) {
-        menu.classList.remove('hidden');
-        hamburger.classList.add('hidden');
-        cross.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
-        cross.classList.add("hidden");
-        hamburger.classList.remove('hidden');
-      }
-    }
-</script>
-<body class="">
-
-  <!-- Navbar wrapper -->
   <div class="flex justify-between mx-5 mt-5 items-center sticky top-0">
-    
-    <!-- Language -->
-    <div class="font-semibold text-xl">
+        <div class="font-semibold text-xl">
       <p>DE</p>
       <p>EN</p>
     </div>
 
-    <!--  Brand -->
     <div class="font-bold text-2xl">Baumeister</div>
 
-    <!-- Desktop menu -->
     <ul class="hidden font-semibold lg:block ">
       <li>About</li>
       <li>Service</li>
@@ -48,7 +13,6 @@
       <li>Contact</li>
     </ul>
 
-    <!-- Hamburger icon (small screens only) -->
   <div class="lg:hidden">
       <img src="src/sections/hamburgerMenu.png" onclick="toggleMenu()" alt="hamburgerMenu" class="hamburger w-8 cursor-pointer">
       <img src="src/sections/crossIcon.png" onclick= "toggleMenu()"alt="crossIcon" class="cross hidden w-8 cursor-pointer">
@@ -56,11 +20,9 @@
   </div>
 
 
-  <ul class="menu-mobile hidden font-semibold fixed text-center mx-auto w-full space-y-4 text-xl p-6 rounded  z-50 lg:hidden">
+  <ul class="menu-mobile text-green-700 hidden font-bold fixed text-center mx-auto w-full space-y-4 text-xl md:text-3xl p-6 rounded  z-50 lg:hidden">
     <li onclick="toggleMenu()">About</li>
     <li onclick="toggleMenu()">Service</li>
     <li onclick="toggleMenu()">Reference</li>
     <li onclick="toggleMenu()">Contact</li>
   </ul>
-</body>
-</html>
