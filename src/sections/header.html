@@ -1,4 +1,28 @@
-<div>
-    <h1 class="text-blue-800">Header</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</p>
-</div>
+  <div class="flex justify-between mx-5 mt-5 items-center sticky top-0">
+        <ul class="font-semibold text-xl">
+      <li>DE</li>
+      <li>EN</li>
+        </ul>
+
+    <div class="font-bold text-2xl">Baumeister</div>
+
+    <ul class="hidden font-semibold lg:block text-right">
+      <li>About</li>
+      <li>Service</li>
+      <li>Reference</li>
+      <li>Contact</li>
+    </ul>
+
+    <div class="lg:hidden bg-[url('../../assets/black.png')] bg-cover px-4 font-bold"  onclick="toggleMenu()">
+      <span class="hamburger text-white">☰</span>
+      <span class="cross hidden text-white" id="con">✕</span>
+    </div>
+  </div>
+
+
+  <ul class="menu-mobile text-green-700 hidden font-bold fixed text-center mx-auto w-full space-y-4 text-xl md:text-3xl p-6 rounded  z-50 lg:hidden">
+    <li onclick="toggleMenu()">About</li>
+    <li onclick="toggleMenu()">Service</li>
+    <li onclick="toggleMenu()">Reference</li>
+    <li onclick="toggleMenu()">Contact</li>
+  </ul>
