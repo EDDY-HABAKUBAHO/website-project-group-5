@@ -23,8 +23,8 @@
         });
     };
 
-    window.onload = async () => {
-      await loadComponents('header', 'src/sections/header.html');
+    window.onload = () => {
+      loadComponents('header', 'src/sections/header.html');
       loadComponents('hero', 'src/sections/hero.html');
       loadComponents('contact', 'src/sections/contact.html');
       loadComponents('footer', 'src/sections/footer.html');
@@ -34,7 +34,7 @@
         const menu = document.querySelector('.menu-mobile');
         const hamburger = document.querySelector('.hamburger');
         const cross = document.querySelector('.cross');
-        const heroDescription = document.querySelector('.heroDesc')
+        const heroDescription = document.querySelector('.hero-description')
 
         const isHidden = menu.classList.contains('hidden');
 
