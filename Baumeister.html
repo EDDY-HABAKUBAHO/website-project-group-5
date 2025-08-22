@@ -10,7 +10,7 @@
 
 <body class="text-green-800">
     <div id="header"></div>
-    <div id="privacy"></div>
+    <div id="Baumeister"></div>
     <script>
         const loadComponents = (id, url) => {
             return fetch(url)
@@ -22,7 +22,7 @@
 
         window.onload = () => {
             loadComponents('header', 'src/sections/header.html');
-            loadComponents('privacy', 'src/sections/dataPrivacy.html');
+            loadComponents('Baumeister', 'src/sections/baumeisterHeroSection.html');
         }
         window.toggleMenu = function () {
             const menu = document.querySelector('.menu-mobile');
