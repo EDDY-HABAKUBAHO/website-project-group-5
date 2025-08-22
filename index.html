@@ -10,9 +10,11 @@
 
 <body>
   <div id="header"></div>
-  <div id="hero"></div>
-  <div id="contact"></div>
-  <div id="footer"></div>
+    <div id="hero"></div>
+  <section class="absolute w-full bg-white -mt-[3%] pt-20 z-20">
+    <div id="contact"></div>
+    <div id="footer"></div>
+  </section>
 
   <script>
     const loadComponents = (id, url) => {
@@ -28,7 +30,6 @@
       loadComponents('hero', 'src/sections/hero.html');
       loadComponents('contact', 'src/sections/landingPage-body.html');
       loadComponents('footer', 'src/sections/footer.html');
-      loadComponents('Baumeister', 'src/sections/Baumeister.html');
 
       
       window.toggleMenu = function () {
