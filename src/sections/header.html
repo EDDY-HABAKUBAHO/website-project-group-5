@@ -1,28 +1,28 @@
   <div class="flex justify-between mx-5 mt-5 items-center sticky top-0">
-        <div class="font-semibold text-xl">
-      <p>DE</p>
-      <p>EN</p>
-    </div>
+        <ul class="font-semibold text-xl">
+      <li>DE</li>
+      <li>EN</li>
+        </ul>
 
     <div class="font-bold text-2xl">Baumeister</div>
 
-    <ul class="hidden font-semibold lg:block ">
-      <li>About</li>
-      <li>Service</li>
+    <ul class="hidden font-semibold lg:block text-right">
+      <li><a href="../../index.html">About</a></li>
+      <li><a href="../../privacyPolicy.html">Service</a></li>
       <li>Reference</li>
       <li><a href="/src/sections/Baumeister.html">Contact</a></li>
     </ul>
 
-  <div class="lg:hidden">
-      <img src="src/sections/hamburgerMenu.png" onclick="toggleMenu()" alt="hamburgerMenu" class="hamburger w-8 cursor-pointer">
-      <img src="src/sections/crossIcon.png" onclick= "toggleMenu()"alt="crossIcon" class="cross hidden w-8 cursor-pointer">
+    <div class="lg:hidden bg-[url('../../assets/black.png')] bg-cover px-4 font-bold"  onclick="toggleMenu()">
+      <span class="hamburger text-white">☰</span>
+      <span class="cross hidden text-white" id="con">✕</span>
     </div>
   </div>
 
 
   <ul class="menu-mobile text-green-700 hidden font-bold fixed text-center mx-auto w-full space-y-4 text-xl md:text-3xl p-6 rounded  z-50 lg:hidden">
-    <li onclick="toggleMenu()">About</li>
-    <li onclick="toggleMenu()">Service</li>
+    <li onclick="toggleMenu()"><a href="../../index.html">About</a></li>
+    <li onclick="toggleMenu()"><a href="../../privacyPolicy.html">Service</a></li>
     <li onclick="toggleMenu()">Reference</li>
     <li onclick="toggleMenu()">Contact</li>
   </ul>
